@@ -1,0 +1,23 @@
+/*
+  Customize values and adapt the styles to the platform
+*/
+
+// Background image displayed on desktop.
+// If null, it will center the login form on the screen.
+// You can also provide a local file, it will be inlined
+$background-image-url: url("https://s3-eu-west-1.amazonaws.com/blsq-dhis2/dhis2-assets/blsq-dhis2-intersos-hero-image.png");
+
+// Text color used in the login panel.
+$text-color: white;
+
+/* 
+If a flag is configured in the DHIS2 settings, 'true' will display
+it in the top let corner of the screen.
+*/
+$display-flag: false; 
+
+// Background color of the login panel.
+$background-color: rgba(67,97,238, 1); // The default is the main color of BLSQ
+
+// Width of the login panel (the rest of the screen is used to display the background image)
+$left-panel-width: 420px;

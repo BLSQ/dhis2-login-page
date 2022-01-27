@@ -1,0 +1,257 @@
+@import "reset.css";
+@import "theme.scss";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+
+html.loginPage {
+  width: 100%;
+  height: 100%;
+  background: $background-color;
+}
+
+#loginField > #loginArea > #loginForm > #submitDiv {
+  text-align: center;
+  margin-top: 1em;
+}
+#loginForm label {
+  font-size: 14px;
+}
+
+body.loginPage {
+  position: relative;
+  line-height: 1.15;
+  width: $left-panel-width;
+  height: 100vh;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $text-color;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column-reverse;
+
+  @if $background-image-url == null {
+    margin: auto;
+  }
+}
+
+/* Style all the blocks */
+.loginPage > div {
+  z-index: 1;
+  padding-inline: 60px;
+  background: $background-color;
+}
+
+/* Login block */
+#loginField {
+  position: static;
+  order: 1;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  flex: 2;
+  z-index: 2;
+}
+
+/* Intro & Title block */
+.loginPage > div:not([id]) {
+  order: 2;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Background Image */
+body.loginPage:before {
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: $background-image-url;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}
+
+a,
+a:visited {
+  color: $text-color;
+}
+
+/* Background Banner area */
+#bannerArea {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+}
+
+#bannerArea a img {
+  max-height: 100px;
+  max-width: 200px;
+}
+
+#titleArea,
+#flagArea,
+#introArea {
+  position: static;
+  color: $text-color;
+}
+
+@if $display-flag {
+  #flagArea {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+} @else {
+  #flagArea {
+    display: none;
+  }
+}
+
+#titleArea {
+  font-size: 24px;
+  margin-top: 170px; /* For the banner image */
+}
+
+
+#introArea {
+  display: block;
+  margin-top: 1em;
+  font-size: 16px;
+  color: $text-color;
+  width: 100%;
+}
+
+#loginArea {
+  padding-top: 2em;
+}
+
+#loginField input[type="text"],
+input[type="password"], input[type="code"] {
+  width: 100%;
+  padding: 15px;
+}
+
+#loginField input[type="code"] {
+  margin-top: 8px;
+}
+
+#forgotPasswordLink,
+#createAccountLink {
+  font-size: 14px;
+  color: $text-color;
+}
+
+#notificationArea {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: center;
+  color: $text-color;
+  font-size: 14px;
+}
+
+/* Footer area  */
+
+#poweredByLabel {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1em;
+  color: $text-color;
+
+}
+
+#footerArea {
+  position: static;
+  border :0;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  color: $text-color;
+  padding-bottom: 30px;
+  padding-inline: 16px;
+}
+
+
+#rightFooterArea {
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+
+}
+
+#leftFooterArea {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  color: $text-color;
+}
+
+#signInLabel {
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+#loginMessage {
+  color: $text-color;
+  border-color: darkorange;
+  background: transparent;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* Custom applicationIntro, uses `dd` */
+dl.blsqContactDetails {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+dl.blsqContactDetails > dt {
+    width: 100%;
+    font-weight: bold;
+}
+dl.blsqContactDetails > dd {
+    min-width: 0;
+    margin-left: auto;
+    width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body.loginPage {
+    width: 100vw;
+    background-image: none;
+  }
+
+  #bannerArea {
+    top: 20px;
+  }
+
+  #titleArea {
+    margin-top: 90px; /* For the banner image */
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  dl.blsqContactDetails > dt {
+      width: 15%;
+  }
+  dl.blsqContactDetails > dd {
+      width: 85%;
+  }
+}

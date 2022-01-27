@@ -1,0 +1,30 @@
+{
+  "name": "dhis2-login-page",
+  "version": "1.0.0",
+  "description": "## How To",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss styles.scss -o build/styles.css ",
+    "dev": "postcss styles.scss -o build/styles.css -w",
+    "push": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qgerome/dhis2-login-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qgerome/dhis2-login-page/issues"
+  },
+  "homepage": "https://github.com/qgerome/dhis2-login-page#readme",
+  "dependencies": {
+    "@csstools/postcss-sass": "^4.0.0",
+    "axios": "^0.25.0",
+    "commander": "^8.3.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-url": "^10.1.3"
+  }
+}
