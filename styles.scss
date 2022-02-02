@@ -185,8 +185,10 @@ input[type="password"], input[type="code"] {
 
 #rightFooterArea {
   margin-right: 0;
+  gap: 8px;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   align-items: center;
   margin-top: 2em;
 
@@ -200,6 +202,7 @@ input[type="password"], input[type="code"] {
 }
 
 #signInLabel {
+  display: none;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
@@ -207,11 +210,16 @@ input[type="password"], input[type="code"] {
 }
 
 #loginMessage {
-  color: $text-color;
+  color: darkorange;
   border-color: darkorange;
   background: transparent;
   padding: 12px;
   font-size: 14px;
+}
+
+#rightFooterArea > #localeSelect {
+  /* Override the style attr on localeSelect with !important */
+  margin-left: 0px !important;
 }
 
 /* Custom applicationIntro, uses `dd` */
