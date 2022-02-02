@@ -6,7 +6,7 @@
   "scripts": {
     "build": "postcss styles.scss -o build/styles.css ",
     "dev": "postcss styles.scss -o build/styles.css -w",
-    "push": "node ./index.js"
+    "push": "npm run build && node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
-    "postcss-url": "^10.1.3"
+    "postcss-url": "^10.1.3",
+    "postcss-scss": "^4.0.3"
   }
 }
