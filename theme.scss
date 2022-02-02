@@ -5,7 +5,7 @@
 // Background image displayed on desktop.
 // If null, it will center the login form on the screen.
 // You can also provide a local file, it will be inlined in base64
-$background-image-url: url("https://s3-eu-west-1.amazonaws.com/blsq-dhis2/dhis2-assets/blsq-dhis2-intersos-hero-image.png");
+$background-image-url: url("./assets/background_example.png");
 
 // Text color used in the login panel.
 $text-color: white;
