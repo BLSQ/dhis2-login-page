@@ -1,5 +1,6 @@
 {
   "backgroundColor": "rgba(67,97,238, 1)",
+  "backgroundImage": "url('https://s3-eu-west-1.amazonaws.com/blsq-dhis2/dhis2-assets/blsq-dhis2-intersos-hero-image.png')",
   "textColor": "white",
   "displayFlag": false,
   "leftPanelWidth": "420px"
