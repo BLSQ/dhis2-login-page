@@ -4,9 +4,19 @@ This repository provides a script that will help you set a custom CSS theme for 
 
 ## How To Generate a Default Stylesheet
 
-    $ npx @blsq/dhis2-theme create
+    $ npx @blsq/dhis2-theme create // default: theme.json
 
 It will create a `theme.json` that you can customize at will.
+
+## Theme Variables
+
+Variables are in the file created at the last step (default: theme.json).
+
+- `backgroundImage`: Can be empty or filled with a css `url()`. HTTP/HTTPS images will be kept untouched but local files will be inlined in the resulting css
+- `backgroundColor`: Background color of the whole login page
+- `textColor`: Text color of the login page
+- `displayFlag`: Display the flag according the dhis2 setting (default: false)
+- `leftPanelWidth`: Width of the left panel containing the login form
 
 ## How to Update Your DHIS2 Instance
 
