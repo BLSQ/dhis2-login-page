@@ -1,8 +1,8 @@
 {
-  "name": "@blsq/dhis2-theme",
+  "name": "dhis2-theme",
   "version": "1.0.0",
   "private": false,
-  "description": "## How To",
+  "description": "",
   "main": "index.js",
   "bin": "index.js",
   "engines": {
