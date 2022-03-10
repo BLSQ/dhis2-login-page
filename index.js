@@ -22,7 +22,7 @@ async function publish(baseURL, {output, username, password}) {
   try {
     const response = await axios({
       method: 'post',
-      url: '/api/31/files/style',
+      url: '/api/30/files/style',
       headers: {
         'Content-Type': 'text/css'
       },
