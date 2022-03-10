@@ -22,7 +22,7 @@ async function publish(baseURL, {output, username, password}) {
   try {
     const response = await axios({
       method: 'post',
-      url: '/api/33/files/style',
+      url: '/api/31/files/style',
       headers: {
         'Content-Type': 'text/css'
       },
@@ -30,8 +30,13 @@ async function publish(baseURL, {output, username, password}) {
     });
     console.log(response.data.message);
   } catch (err) {
-    console.log(err)
-    throw new Error("Check your credentials or network");
+    if (err.response && [401, 403].includes(err.response.status)) {
+      throw new Error("Check your credentials");
+    } else if (err.response) {
+      throw new Error(err.response.data)
+    } else {
+      throw err
+    }
   }
   
   console.log('\nSet footers for locales...');
@@ -47,7 +52,11 @@ async function publish(baseURL, {output, username, password}) {
       });
       console.log(response.data.message);
     } catch (err) {
-      console.error(err.message);
+      if (err.response){
+        throw new Error(err.response.data)
+      } else {
+        throw err
+      }
     }
   }
 }
