@@ -89,6 +89,9 @@ async function build(themeFile, {output}) {
 }
 
 async function main(themeFile, {server, username, password, output}) {
+  if (!server.startsWith("https://")) {
+    throw new Error("Only https is accepted")
+  }
   await build(themeFile, {output});
   if (server && username && password) {
     await publish(server, {username, password, output});
