@@ -2,6 +2,10 @@
 
 This repository provides a script that will help you set a custom CSS theme for the login page of a DHIS2 instance in adequation with BLSQ defined layout.
 
+## Prerequisites
+
+You need to have at least node.js v16.
+
 ## How To Generate a Default Stylesheet
 
     $ npx @blsq/dhis2-theme create // default: theme.json

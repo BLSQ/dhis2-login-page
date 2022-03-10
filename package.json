@@ -5,6 +5,9 @@
   "description": "## How To",
   "main": "index.js",
   "bin": "index.js",
+  "engines": {
+    "node": ">=16"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qgerome/dhis2-login-page.git"
