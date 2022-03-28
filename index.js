@@ -17,6 +17,10 @@ const program = new commander.Command();
 async function publish(baseURL, {output, username, password}) {
   console.log(`Publish custom CSS on ${baseURL}`);
   axios.defaults.baseURL = baseURL;
+  if (!baseURL.startsWith("https://")) {
+    console.warn("Using http protocol.");
+  }
+  
   axios.defaults.auth = {username, password};
   
   try {
@@ -89,9 +93,6 @@ async function build(themeFile, {output}) {
 }
 
 async function main(themeFile, {server, username, password, output}) {
-  if (!server.startsWith("https://")) {
-    throw new Error("Only https is accepted")
-  }
   await build(themeFile, {output});
   if (server && username && password) {
     await publish(server, {username, password, output});
